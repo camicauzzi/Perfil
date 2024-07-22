@@ -1,21 +1,57 @@
 document.addEventListener("DOMContentLoaded", function () {
-  //   const form = document.getElementById("contactForm");
-  //   form.addEventListener("submit", function (event) {
-  //     const nombre = document.getElementById("nombre").value;
-  //     const correo = document.getElementById("correo").value;
-  //     const mensaje = document.getElementById("mensaje").value;
-  //     if (nombre === "" || correo === "" || mensaje === "") {
-  //       alert("Todos los campos son obligatorios.");
-  //       event.preventDefault();
-  //     } else if (!validateEmail(correo)) {
-  //       alert("Por favor, introduce un correo electrónico válido.");
-  //       event.preventDefault();
-  //     } else {
-  //       alert("Formulario enviado correctamente.");
-  //     }
-  //   });
-  //   function validateEmail(email) {
-  //     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  //     return re.test(email);
-  //   }
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener(
+    "submit",
+    function (event) {
+      let valid = true;
+
+      if (!validateEmail(document.getElementById("correo").value)) {
+        document.getElementById("correo").classList.add("is-invalid");
+        valid = false;
+      }
+
+      if (!form.checkValidity() || !valid) {
+        event.preventDefault();
+        event.stopPropagation();
+        form.classList.add("was-validated");
+      } else {
+        event.preventDefault();
+        removeValidationClasses();
+        form.reset();
+        alert("Formulario enviado correctamente.");
+      }
+    },
+    false
+  );
+
+  form.addEventListener("input", function (event) {
+    const target = event.target;
+    if (target.id === "correo") {
+      if (validateEmail(target.value)) {
+        target.classList.remove("is-invalid");
+      } else {
+        target.classList.add("is-invalid");
+      }
+    } else {
+      if (target.validity.valid) {
+        target.classList.remove("is-invalid");
+      } else {
+        target.classList.add("is-invalid");
+      }
+    }
+  });
+
+  function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  }
+
+  function removeValidationClasses() {
+    form.classList.remove("was-validated");
+    const invalidElements = form.querySelectorAll(".is-invalid");
+    invalidElements.forEach((element) => {
+      element.classList.remove("is-invalid");
+    });
+  }
 });
