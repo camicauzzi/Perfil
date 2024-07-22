@@ -1,0 +1,64 @@
+:root {
+  --dark-color: #343a40;
+  --light-color: #f8f9fa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  background: linear-gradient(to top, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.navbar {
+  background-color: var(--dark-color);
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--light-color);
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  font-size: 1.125rem;
+}
+
+.carousel-dark .carousel-control-next-icon,
+.carousel-dark .carousel-control-prev-icon {
+  filter: invert(0) !important;
+}
+
+#perfil .card {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+form .form-control {
+  margin-bottom: 1.5rem;
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+form textarea {
+  resize: none;
+}
+
+footer {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 1.25rem 0;
+  text-align: center;
+}
