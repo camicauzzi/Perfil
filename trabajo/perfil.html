@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/estilos-globales.css" />
+    <title>Mi Perfil</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top p-4">
+      <a class="navbar-brand" href="#">Mi Perfil</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-center justify-content-sm-end"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item d-flex justify-content-center">
+            <a class="nav-link" href="/trabajo/">Inicio</a>
+          </li>
+          <li class="nav-item d-flex justify-content-center">
+            <a class="nav-link active" href="#">Perfil</a>
+          </li>
+          <li class="nav-item d-flex justify-content-center">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="perfil" class="container my-5">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <img
+              src="imagenes/spacex-1.jpg"
+              class="card-img-top"
+              alt="Foto de perfil de Camila"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Camila Cauzzi</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-dark">Contactame</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 mt-3 mt-sm-0">
+          <div class="card">
+            <img
+              src="imagenes/spacex-2.jpg"
+              class="card-img-top"
+              alt="Foto de perfil de Carlos"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Carlos Gomes</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-dark">Contactame</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="fecha"></span> Camila Cauzzi | Carlos Gomes</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script-fecha.js"></script>
+  </body>
+</html>

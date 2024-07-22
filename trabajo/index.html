@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/estilos-globales.css" />
+    <title>Inicio</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top p-4">
+      <a class="navbar-brand" href="#">Mi Perfil</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-center justify-content-sm-end"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item d-flex justify-content-center">
+            <a class="nav-link active" href="/trabajo/">Inicio</a>
+          </li>
+          <li class="nav-item d-flex justify-content-center">
+            <a class="nav-link" href="perfil.html">Perfil</a>
+          </li>
+          <li class="nav-item d-flex justify-content-center">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="inicio" class="container my-5">
+      <div
+        id="carouselExampleDark"
+        class="carousel carousel-dark slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img
+              src="imagenes/spacex-carrusel-1.jpg"
+              class="d-block w-100"
+              alt=""
+            />
+            <div class="carousel-caption d-none d-md-block text-white">
+              <h5>Primera imagen de Space X</h5>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="imagenes/spacex-carrusel-2.jpg"
+              class="d-block w-100"
+              alt=""
+            />
+            <div class="carousel-caption d-none d-md-block text-white">
+              <h5>Segunda imagen de Space X</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="imagenes/spacex-carrusel-3.jpg"
+              class="d-block w-100"
+              alt=""
+            />
+            <div class="carousel-caption d-none d-md-block text-white">
+              <h5>Tercera imagen de Space X</h5>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="fecha"></span> Camila Cauzzi | Carlos Gomes</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/script-fecha.js"></script>
+  </body>
+</html>
