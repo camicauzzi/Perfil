@@ -5,6 +5,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -55,7 +56,7 @@ form {
 }
 
 form .form-control {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 form label {
