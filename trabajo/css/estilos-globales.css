@@ -28,9 +28,20 @@ body {
   font-size: 1.125rem;
 }
 
-.carousel-dark .carousel-control-next-icon,
-.carousel-dark .carousel-control-prev-icon {
-  filter: invert(0) !important;
+.carousel-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+  background-color: var(--light-color);
+}
+
+@media screen and (max-width: 576px) {
+  .carousel-dark .carousel-control-next-icon,
+  .carousel-dark .carousel-control-prev-icon {
+    filter: invert(0);
+  }
 }
 
 #perfil .card {
