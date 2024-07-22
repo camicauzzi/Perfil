@@ -9,6 +9,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="css/estilos-globales.css" />
     <title>Contacto</title>
   </head>
@@ -64,9 +68,13 @@
     </header>
 
     <main id="contacto" class="container my-5">
-      <form>
+      <form
+        class="animate__animated animate__slideInUp"
+        id="contactForm"
+        novalidate
+      >
         <fieldset class="container-md mx-auto">
-          <legend>Contáctanos</legend>
+          <legend class="h1">Contáctanos</legend>
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
             <input
@@ -108,7 +116,7 @@
               Por favor, introduce un mensaje de al menos 3 caracteres.
             </p>
           </div>
-          <button type="submit" class="btn btn-dark btn-lg">Enviar</button>
+          <button type="submit" class="btn btn-dark btn-md">Enviar</button>
         </fieldset>
       </form>
     </main>
